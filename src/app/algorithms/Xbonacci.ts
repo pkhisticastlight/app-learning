@@ -6,13 +6,10 @@ export class Xbonacci {
     //[1,1],10
     isXbonacci(signature,n) {
         let signatureLength =  signature.length;
-        for(let i = signatureLength  ; i < n ; i++) {
+        for(let i = signatureLength ; i < n ; i++) {
             let arr = signature.slice(i-signatureLength,signature.length + 1);
-            console.log(arr);
             let sum = arr.reduce((item,acc)=>acc+item,0);
-            console.log(sum);
             signature.push(sum);
-            console.log(signature);
         }
         return signature;
     }
