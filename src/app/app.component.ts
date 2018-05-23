@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LuhnAlgorithm } from './algorithms/LuhnAlgorithm';
 import { Xbonacci } from './algorithms/Xbonacci';
 import { FoldArray } from './algorithms/FoldArray';
+import { CircularSort } from './algorithms/CircularSort';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,11 @@ import { FoldArray } from './algorithms/FoldArray';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'learning app';
+  title = 'Vacation Plans';
 
   ngOnInit() {
+    let sort = new CircularSort();
+    console.log(sort.isCircularSort([5, 6, 54, 435, 888, 9999, -8, 1, 2]));
   }
   
 }
