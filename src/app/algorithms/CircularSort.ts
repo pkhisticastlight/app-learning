@@ -14,4 +14,20 @@ export class CircularSort {
         }
         return false;
     }
+
+    countAdjacentPairs(searchString) {
+        searchString = searchString.replace(/\s+/g, ' ');
+        let searchArray = searchString.split(' ');
+        let temp = [];
+        let count = 0;
+        searchArray.forEach((element,index) => {
+            if(index>0) {
+                if(element.toLowerCase() == searchArray[index-1].toLowerCase() && temp.indexOf(element) == -1) {
+                    count++;
+                    temp.push(element.toLowerCase());
+                }
+            }
+        });
+        return count;
+    }
 }

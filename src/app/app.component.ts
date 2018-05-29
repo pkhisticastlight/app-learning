@@ -9,12 +9,13 @@ import { CircularSort } from './algorithms/CircularSort';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent implements OnInit {
   title = 'Vacation Plans';
 
   ngOnInit() {
     let sort = new CircularSort();
-    console.log(sort.isCircularSort([5, 6, 54, 435, 888, 9999, -8, 1, 2]));
+    console.log(sort.countAdjacentPairs("apple     apple dog cat"));
   }
   
 }
